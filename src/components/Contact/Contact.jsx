@@ -8,40 +8,41 @@ const Contact = () => {
   const [isSent, setIsSent] = useState(false);
 
   const sendEmail = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_7whzh3m",  
-        "template_20uxour",  
-        "Ws1dDsMr8tLcEDmrD"  
-      )
-      .then(
-        () => {
-          setIsSent(true);
-          form.current.reset(); 
-          toast.success("Message sent successfully! ✅", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        },
-        (error) => {
-          console.error("Error sending message:", error);
-          toast.error("Failed to send message. Please try again.", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        }
+  emailjs
+    .sendForm(
+      "service_7whzh3m",  
+      "template_20uxour",  
+      form.current,  // ✅ Don't pass string here, use form ref
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY // ✅ Add this!
+    )
+    .then(
+      () => {
+        setIsSent(true);
+        form.current.reset(); 
+        toast.success("Message sent successfully! ✅", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "dark",
+        });
+      },
+      (error) => {
+        console.error("Error sending message:", error);
+        toast.error("Failed to send message. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          theme: "dark",
+        });
+      }
       );
   };
 
