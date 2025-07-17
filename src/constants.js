@@ -21,8 +21,8 @@ import internProLogo from './assets/company_logo/internpro_logo.jpeg';
 import vocLogo from './assets/company_logo/VOC_logo.png';
 
  // // Education Section Logo's
-import hitLogo from './assets/education_logo/HIT_Logo.jpg';
-import rkLogo from './assets/education_logo/rk_college_logo.jpeg';
+import hitLogo from './assets/education_Logo/HIT_Logo.jpg';
+import rkLogo from './assets/education_Logo/rk_college_logo.jpeg';
 import bsebLogo from './assets/education_Logo/bseb.jpeg'
 
  // Project Section Logo's
