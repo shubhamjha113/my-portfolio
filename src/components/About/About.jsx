@@ -51,9 +51,7 @@ const About = () => {
 
           {/* Description */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-          I’m a frontend developer with strong expertise in React.js, Tailwind CSS, and modern UI design.
-          I’ve built intelligent, real-world projects like an AI-powered Trip Planner, YouTube Clone, and NetflixGPT – an AI-based movie suggestion app.
-          I love creating responsive, user-friendly interfaces that combine performance, design, and smart AI integrations using APIs and Firebase. Currently focused on building projects that stand out in both innovation and user experience.
+          I’m a frontend developer with a strong eye for UI/UX. I build modern, responsive web apps using React.js, Tailwind CSS, and smart API integrations. Currently focused on building real-world projects that balance design and performance.
           </p>
 
           {/* Resume Button */}
